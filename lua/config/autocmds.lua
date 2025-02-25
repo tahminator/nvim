@@ -12,3 +12,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*.md", -- Apply only for Markdown files
   command = "RenderMarkdown disable",
 })
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = "leetcode.com_*.txt",
+  command = "set filetype=java",
+})
