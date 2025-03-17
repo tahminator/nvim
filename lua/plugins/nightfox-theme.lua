@@ -1,8 +1,12 @@
 return {
   { "EdenEast/nightfox.nvim" },
-  { "LazyVim/LazyVim", opts = {
-    colorscheme = "carbonfox",
-  } },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      -- colorscheme = "dayfox",
+      colorscheme = "carbonfox",
+    },
+  },
 }
 
 -- available colorschemes:
