@@ -28,3 +28,16 @@ for i = 1, 9 do
     require("harpoon.ui").nav_file(i)
   end, { noremap = true, silent = true })
 end
+
+vim.keymap.set("n", "<Leader>r", function()
+  local register = vim.fn.getcharstr()
+
+  local count = vim.v.count
+
+  if count == 0 then
+    count = 1
+  end
+  for _ = 1, count do
+    vim.cmd("normal! @" .. register)
+  end
+end, { noremap = true, silent = true })
