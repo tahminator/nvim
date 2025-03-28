@@ -1,38 +1,26 @@
-return {}
-
--- local function get_fortune_cowsay()
---   local handle = io.popen('cowsay -f hank "$(curl https://v2.jokeapi.dev/joke/Dark?format=txt&type=single)"')
---   if handle then
---     local result = handle:read("*a")
---     handle:close()
---     return result
---   end
---   return "Failed to load fortune"
--- end
---
--- return {
---   "snacks.nvim",
---   opts = {
---     dashboard = {
---       preset = {
---         pick = function(cmd, opts)
---           return LazyVim.pick(cmd, opts)()
---         end,
---         header = get_fortune_cowsay(),
---         -- stylua: ignore
---         ---@type snacks.dashboard.Item[]
---         keys = {
---           { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
---           { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
---           { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
---           { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
---           { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
---           { icon = " ", key = "s", desc = "Restore Session", section = "session" },
---           { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
---           { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
---           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
---         },
---       },
---     },
---   },
--- }
+return {
+  "folke/snacks.nvim",
+  opts = {
+    picker = {
+      win = {
+        input = {
+          keys = {
+            ["<c-k>"] = { "list_down", mode = { "i", "n" } },
+            ["<c-j>"] = { "list_up", mode = { "i", "n" } },
+            ["k"] = "list_down",
+            ["j"] = "list_up",
+          },
+        },
+        list = {
+          wo = { number = true, relativenumber = true, signcolumn = "no" },
+          keys = {
+            ["<c-k>"] = "list_down",
+            ["<c-j>"] = "list_up",
+            ["k"] = "list_down",
+            ["j"] = "list_up",
+          },
+        },
+      },
+    },
+  },
+}

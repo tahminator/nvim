@@ -1,6 +1,7 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = function(_, opts)
+    -- opts.window.position = "right"
     opts.event_handlers = {
       {
         event = "neo_tree_buffer_enter",

@@ -5,6 +5,7 @@ return {
     opts = {
       -- colorscheme = "dayfox",
       colorscheme = "carbonfox",
+      transparent = true,
     },
   },
 }

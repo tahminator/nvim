@@ -41,3 +41,5 @@ vim.keymap.set("n", "<Leader>r", function()
     vim.cmd("normal! @" .. register)
   end
 end, { noremap = true, silent = true })
+
+vim.keymap.set("n", "J", "<Nop>", { noremap = true, silent = true })
