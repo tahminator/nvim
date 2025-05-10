@@ -43,9 +43,6 @@ return {
         signs = enabledFlag,
       },
       servers = {
-        markdown = {
-          mason = false,
-        },
         marksman = {
           mason = false,
         },

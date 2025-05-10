@@ -24,3 +24,25 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spell = false
   end,
 })
+
+-- I am not going to try to fix this BS anymore, I have had ENOUGH. Literally just removing this keymap so I don't have to
+-- deal with these terrible defaults.
+vim.schedule(function()
+  local path = vim.fn.expand("~/.local/share/nvim/lazy/LazyVim/lua/lazyvim/plugins/lsp/keymaps.lua")
+  if vim.fn.filereadable(path) == 0 then
+    return
+  end
+
+  local lines = vim.fn.readfile(path)
+
+  local pattern =
+    [[{ "<c%-k>", function%(%) return vim%.lsp%.buf%.signature_help%(%) end, mode = "i", desc = "Signature Help", has = "signatureHelp" },]]
+  local filtered = vim.tbl_filter(function(line)
+    return not line:match(pattern)
+  end, lines)
+
+  if #filtered < #lines then
+    vim.fn.writefile(filtered, path)
+    vim.notify("Deleted <C-k> keymap from LazyVim keymaps.lua", vim.log.levels.INFO)
+  end
+end)
