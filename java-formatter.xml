@@ -448,7 +448,7 @@
         <setting id="org.eclipse.jdt.core.formatter.parentheses_positions_in_try_clause"
             value="common_lines" />
         <setting id="org.eclipse.jdt.core.formatter.alignment_for_selector_in_method_invocation"
-            value="16" />
+            value="80" />
         <setting id="org.eclipse.jdt.core.formatter.never_indent_block_comments_on_first_column"
             value="false" />
         <setting id="org.eclipse.jdt.core.formatter.keep_code_block_on_one_line"
@@ -805,7 +805,7 @@
             value="do not insert" />
         <setting id="org.eclipse.jdt.core.formatter.wrap_before_string_concatenation" value="true" />
         <setting id="org.eclipse.jdt.core.formatter.blank_lines_between_import_groups" value="1" />
-        <setting id="org.eclipse.jdt.core.formatter.lineSplit" value="200" />
+        <setting id="org.eclipse.jdt.core.formatter.lineSplit" value="120" />
         <setting id="org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_annotation"
             value="do not insert" />
         <setting id="org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_switch"

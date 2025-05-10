@@ -17,3 +17,10 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = "leetcode.com_*.txt",
   command = "set filetype=java",
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "text" },
+  callback = function()
+    vim.opt_local.spell = false
+  end,
+})

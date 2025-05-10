@@ -43,3 +43,12 @@ vim.keymap.set("n", "<Leader>r", function()
 end, { noremap = true, silent = true })
 
 vim.keymap.set("n", "J", "<Nop>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "J", function()
+  vim.diagnostic.open_float()
+end, { noremap = true, silent = true })
+
+vim.g.VM_custom_motions = {
+  ["k"] = "j",
+  ["j"] = "k",
+}
