@@ -48,6 +48,11 @@ vim.keymap.set("n", "J", function()
   vim.diagnostic.open_float()
 end, { noremap = true, silent = true })
 
+vim.keymap.set({ "n", "v" }, "dma", function()
+  vim.cmd("delm! | delm A-Z0-9")
+  vim.cmd("wshada!")
+end)
+
 vim.g.VM_custom_motions = {
   ["k"] = "j",
   ["j"] = "k",

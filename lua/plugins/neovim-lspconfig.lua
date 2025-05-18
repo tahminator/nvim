@@ -46,6 +46,9 @@ return {
         marksman = {
           mason = false,
         },
+        markdownlint = {
+          mason = false,
+        },
         vtsls = {
           settings = {
             typescript = {
