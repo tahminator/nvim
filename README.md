@@ -38,8 +38,6 @@ The main purpose of the repository is so that I can simply clone my config anywh
   nvim .
   ```
 
-nvim
-
 - Windows
 
   1. Make a copy of your neovim config, if you already have it installed.
