@@ -18,19 +18,25 @@ The main purpose of the repository is so that I can simply clone my config anywh
   mv ~/.cache/nvim{,.bak}
   ```
 
-  2. Clone repository
+  2. Install Neovim if not installed, via Homebrew
+
+  ```bash
+  brew install neovim
+  ```
+
+  3. Clone repository
 
   ```bash
   git clone https://github.com/tahminator/nvim ~/.config/nvim
   ```
 
-  3. [Optional] - Delete the .git folder so you can track yourself.
+  4. [Optional] - Delete the .git folder so you can track the changes in your own repository.
 
   ```bash
   rm -rf ~/.config/nvim/.git
   ```
 
-  4. Start neovim.
+  5. Start neovim.
 
   ```bash
   cd project
@@ -48,19 +54,25 @@ The main purpose of the repository is so that I can simply clone my config anywh
   Move-Item $env:LOCALAPPDATA\nvim-data $env:LOCALAPPDATA\nvim-data.bak
   ```
 
-  2. Clone repository
+  2. Install Neovim if missing using WinGet
+
+  ```powershell
+  winget install -e --id Neovim.Neovim
+  ```
+
+  3. Clone repository
 
   ```powershell
   git clone https://github.com/tahminator/nvim $env:LOCALAPPDATA\nvim
   ```
 
-  3. [Optional] - Delete the .git folder so you can track yourself.
+  4. [Optional] - Delete the .git folder so you can track the changes in your own repository.
 
   ```powershell
   Remove-Item $env:LOCALAPPDATA\nvim\.git -Recurse -Force
   ```
 
-  4. Start neovim.
+  5. Start neovim.
 
   ```powershell
   cd project
