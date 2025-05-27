@@ -8,8 +8,8 @@ vim.keymap.set({ "n", "v", "o" }, "k", "j", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v", "o" }, "<C-k>", "<C-w>j", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v", "o" }, "<C-j>", "<C-w>k", { noremap = true, silent = true })
 
-vim.keymap.set("n", "mt", "<cmd>RenderMarkdown toggle<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "mp", "<cmd>MarkdownPreview<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>mt", "<cmd>RenderMarkdown toggle<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>p", ":lua require('gitsigns').preview_hunk()<CR>")
 
