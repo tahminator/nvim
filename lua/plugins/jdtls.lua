@@ -8,9 +8,10 @@ return {
     },
     settings = {
       java = {
-        project = {
-          referencedLibraries = {
-            vim.fn.expand("~/jar/json-simple-1.1.1.jar"),
+        configuration = {
+          runtimes = {
+            name = "JavaSE-17",
+            path = "/opt/homebrew/opt/openjdk@17/bin",
           },
         },
         format = {

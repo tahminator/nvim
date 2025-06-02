@@ -49,6 +49,9 @@ return {
         markdownlint = {
           mason = false,
         },
+        clangd = {
+          filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+        },
         vtsls = {
           settings = {
             typescript = {
