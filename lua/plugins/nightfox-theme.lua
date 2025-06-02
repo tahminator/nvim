@@ -1,5 +1,14 @@
 return {
-  { "EdenEast/nightfox.nvim" },
+  {
+    "EdenEast/nightfox.nvim",
+    opts = function()
+      require("nightfox").setup({
+        options = {
+          transparent = true,
+        },
+      })
+    end,
+  },
   {
     "LazyVim/LazyVim",
     opts = {
