@@ -10,8 +10,10 @@ return {
       java = {
         configuration = {
           runtimes = {
-            name = "JavaSE-17",
-            path = "/opt/homebrew/opt/openjdk@17/bin",
+            {
+              name = "JavaSE-17",
+              path = "/opt/homebrew/opt/openjdk@17/bin",
+            },
           },
         },
         format = {
