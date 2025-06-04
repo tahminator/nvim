@@ -12,7 +12,7 @@ return {
           runtimes = {
             {
               name = "JavaSE-17",
-              path = "/opt/homebrew/opt/openjdk@17/bin",
+              path = "/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home",
             },
           },
         },
