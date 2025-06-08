@@ -25,6 +25,15 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.api.nvim_create_augroup("sql_filetype", { clear = true })
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.SQL",
+  callback = function()
+    vim.bo.filetype = "sql"
+  end,
+  group = "sql_filetype",
+})
+
 -- I am not going to try to fix this BS anymore, I have had ENOUGH. Literally just removing this keymap so I don't have to
 -- deal with these terrible defaults.
 vim.schedule(function()
