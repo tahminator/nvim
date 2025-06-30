@@ -34,6 +34,13 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   group = "sql_filetype",
 })
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "Jenkinsfile",
+  callback = function()
+    vim.bo.filetype = "groovy"
+  end,
+})
+
 -- I am not going to try to fix this BS anymore, I have had ENOUGH. Literally just removing this keymap so I don't have to
 -- deal with these terrible defaults.
 vim.schedule(function()
