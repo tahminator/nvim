@@ -17,16 +17,16 @@ vim.keymap.set("n", "c*", "*Ncgn", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>ha", function()
   require("harpoon.mark").add_file()
-end, { noremap = true, silent = true })
+end, { noremap = true, silent = true, desc = "Add file to Harpoon" })
 
 vim.keymap.set("n", "<leader>hh", function()
   require("harpoon.ui").toggle_quick_menu()
-end, { noremap = true, silent = true })
+end, { noremap = true, silent = true, desc = "Open Harpoon menu" })
 
 for i = 1, 9 do
   vim.keymap.set("n", "<leader>h" .. i, function()
     require("harpoon.ui").nav_file(i)
-  end, { noremap = true, silent = true })
+  end, { noremap = true, silent = true, desc = "Open Harpoon file: index " .. i })
 end
 
 vim.keymap.set("n", "<Leader>r", function()
@@ -40,18 +40,22 @@ vim.keymap.set("n", "<Leader>r", function()
   for _ = 1, count do
     vim.cmd("normal! @" .. register)
   end
-end, { noremap = true, silent = true })
+end, { noremap = true, silent = true, desc = "Replay macro on given key" })
 
 vim.keymap.set("n", "J", "<Nop>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "J", function()
   vim.diagnostic.open_float()
-end, { noremap = true, silent = true })
+end, { noremap = true, silent = true, desc = "Open diagnostics/errors on buffer" })
 
 vim.keymap.set({ "n", "v" }, "dma", function()
   vim.cmd("delm! | delm A-Z0-9")
   vim.cmd("wshada!")
 end)
+
+vim.keymap.set("n", "m", "'", { desc = "Jump to mark" })
+
+vim.keymap.set("n", "<leader>m", "m", { desc = "Set mark" })
 
 vim.g.VM_custom_motions = {
   ["k"] = "j",
